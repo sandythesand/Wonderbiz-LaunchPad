@@ -1,0 +1,49 @@
+<div class="horizontal-menu">
+  <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+     <div class="container">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+           <a class="navbar-brand brand-logo" ><img src="assets/images/Logo-Test.png"
+                 alt="logo" /></a>
+           <a class="navbar-brand brand-logo-mini"><img src="assets/images/Logo-Test.png"
+                 alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+
+           <ul class="navbar-nav navbar-nav-right shwHighRes">
+              <li class="nav-item nav-profile dropdown">
+                 <a class="nav-link shwHighRes" data-toggle="dropdown" id="profileDropdown">
+                    {{currentUser}} <i style="
+                    font-size: 40px;
+                ">&equiv;</i>
+                 </a>
+                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown mt-3 mr-2"
+                    aria-labelledby="profileDropdown">
+                    <a class="dropdown-item">
+                       <i class="mdi mdi-logout"></i>
+                       Logout
+                    </a>
+                 </div>
+              </li>
+           </ul>
+           <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+              data-toggle="horizontal-menu-toggle">
+              <span class="mdi mdi-menu"></span>
+           </button>
+
+        </div>
+     </div>
+  </nav>
+  <nav class="bottom-navbar">
+     <div class="container">
+        <ul class="nav page-navigation">
+           <li class="nav-item">
+              <a class="nav-link">
+                 <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
+                 <span class="menu-title">Home</span>
+              </a>
+           </li>
+
+        </ul>
+     </div>
+  </nav>
+</div>

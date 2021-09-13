@@ -1,0 +1,165 @@
+<!-- partial -->
+<div class="container-fluid page-body-wrapper">
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-title">Menu</p>
+                <div class="row ">
+                  <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                    <ul class="nav">
+                      <li class="nav-item active">
+                        <a class="nav-link" >
+                          <i class="mdi mdi-clipboard-text-outline menu-icon"></i>
+                          <span class="menu-title">Dashboard</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" >
+                          <i class="mdi mdi-airplay menu-icon"></i>
+                          <span class="menu-title">Widgets</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link collapsed" data-toggle="collapse" id="#ui-basic" aria-expanded="false" aria-controls="ui-basic" ngbDropdownToggle>
+                          <i class="mdi mdi-invert-colors menu-icon"></i>
+                          <span class="menu-title">UI Elements</span>
+                          <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" ngbDropdownMenu  aria-labelledby="ui-basic" style="">
+                          <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" >Accordions</a></li>
+                            <li class="nav-item"> <a class="nav-link">Buttons</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <p class="card-title">Analytic Dashboard</p>
+          <div class="grid-margin stretch-card">
+            <div class="card">
+              <div class="row ">
+                <div class="col-md-12">
+                    <div >
+                       <div class="card-body">
+                        <p class="card-title">Launch Dashboard</p>
+                        <div class="row">
+                        <div class="col-md-4 plr20">
+                          <a class="quickAccBlock block1">
+                            <p class="center">{{upcomongLaunchCount?.length}}</p>
+                            <p class="center">Upcoming</p>
+                          </a>
+                        </div>
+                        <div class="col-md-4 plr20">
+                          <a  class="quickAccBlock block2">
+                            <p class="center">{{pastLaunchCount?.length}}</p>
+                            <p class="center">Past</p>
+                          </a>
+                        </div>
+                        <div class="col-md-4 plr20">
+                          <a  class="quickAccBlock block3">
+                            <p class="center">{{totalLaunchCount?.length}}</p>
+                            <p class="center">Total</p>
+                          </a>
+                        </div>
+                        </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="grid-margin stretch-card">
+                <div class="card">
+                  <div class="row ">
+                    <div class="col-md-12 stretch-card">
+                      <div class="card-body ">
+                        <p class="card-title">Launchpad Locations</p>
+                        <div class="row ">
+                          <div class="table-responsive" style="
+                          height: 150px;" >
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="grid-margin stretch-card">
+                <div class="card">
+                  <div class="row ">
+                    <div class="col-md-12 stretch-card">
+                      <div class="card-body ">
+                        <p class="card-title">Launch Over Time</p>
+                        <div class="row ">
+                              <div style="display: block">
+                                <canvas baseChart
+                                  [datasets]="barChartData"
+                                  [labels]="barChartLabels"
+                                  [options]="barChartOptions"
+                                  [legend]="barChartLegend"
+                                  [chartType]="barChartType">
+                                </canvas>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="grid-margin stretch-card">
+                <div class="card">
+                  <div class="row ">
+                    <div class="col-md-12 stretch-card">
+                      <div class="card-body ">
+                        <p class="card-title">Launch Timeline</p>
+                        <div class="scroll-area">
+                          <div class="vertical-timeline vertical-timeline--animate vertical-timeline--one-column">
+                              <div class="vertical-timeline-item vertical-timeline-element" *ngFor="let item of totalLaunchCount">
+                                  <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-success"></i> </span>
+                                      <div class="vertical-timeline-element-content bounce-in">
+                                          <h4 class="timeline-title">{{item.mission_name}}</h4>
+                                          <span class="vertical-timeline-element-date">{{item.launch_date_utc | date: 'dd/MM/yyyy hh:mm:ss'}}</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+
+    <!-- partial -->
+  </div>
+  <!-- main-panel ends -->
+</div>

@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/font-awesome/css/font-awesome.min.css",
+              "src/assets/mdi/css/materialdesignicons.min.css",
+              "src/assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/template.js",
+              "src/assets/js/vendor.bundle.base.js"
+            ]
           },
           "configurations": {
             "production": {
